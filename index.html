@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet SE</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>Projet SE</h1>
+      <div class="links">
+        <a href="#">Version 2 (future version)</a>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="input">
+        <h1>User input</h1>
+        <textarea id="userInput" placeholder="Texte à mettre ici">
+T1 < T2
+T2 < T3
+T2 < T4
+T3 < T5
+T5 < T7
+T6 < T7
+T6 < T9
+T8 < T9
+         </textarea>
+        <button name="button" onClick="eventTriggered()" type="button">
+          Cliquez pour générer le canvas
+        </button>
+      </div>
+      <div class="output">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="description">
+        <h1>schéma to canvas</h1>
+        <p>
+          Ce projet est réalisé par Tony BIONDA et Oussama HADDAD<br />
+          Le but est d'écrire un schéma fonctionnel dans le User Input pour que
+          le programme le transforme en canvas.<br />Essayez-donc! (il y a déjà un exemple)
+        </p>
+      </div>
+      <div class="console">
+        <h1>Console output</h1>
+        <p id="consoleOutput"></p>
+      </div>
+    </div>
+    <div class="footer">L3MIAGE UEVE</div>
+    <script src="event.js"></script>
+    <script src="app/logs.js"></script>
+    <script src="app/model.js"></script>
+    <script src="app/functions.js"></script>
+    <script src="app/draw.js"></script>
+    <script src="https://d3js.org/d3.v5.js"></script>
+  </body>
+</html>

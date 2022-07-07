@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  min-width: 600px;
+}
+
+@media screen and (max-width: 749px) {
+  body .content {
+        grid-template-areas: "description" "input" "output" "console";
+    -ms-grid-rows: 200px 1fr 1fr auto;
+        grid-template-rows: 200px 1fr 1fr auto;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  body .content {
+        grid-template-areas: "input description" "output console";
+    -ms-grid-rows: 200px auto;
+        grid-template-rows: 200px auto;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+  }
+}
+
+body nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #3e3e3e;
+  width: 100%;
+  color: white;
+}
+
+body nav h1 {
+  margin-left: 20px;
+}
+
+body nav .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30%;
+}
+
+body nav .links :last-child {
+  margin-right: 10%;
+}
+
+body nav .links a {
+  text-decoration: none;
+  color: white;
+  font-family: "Cookie", cursive;
+  font-size: 30px;
+}
+
+body .content {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  margin: 10px;
+  height: auto;
+  width: 80%;
+}
+
+body .content .input {
+  grid-area: input;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .content .input textarea {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  width: 100%;
+  height: 100px;
+  resize: none;
+}
+
+body .content .input button {
+  border: none;
+  cursor: pointer;
+}
+
+body .content .output {
+  grid-area: output;
+}
+
+body .content .output #canvas {
+  background: #ddd;
+  width: 100%;
+  height: auto;
+}
+
+body .content .description {
+  grid-area: description;
+  text-align: justify;
+}
+
+body .content .console {
+  grid-area: console;
+  background: #ddd;
+  padding-left: 20px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  min-height: 200px;
+}
+
+body .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #3e3e3e;
+  text-align: center;
+  color: white;
+  font-family: "Cookie", cursive;
+}
+
+h1 {
+  font-family: "Cookie", cursive;
+  font-size: 30px;
+}
+/*# sourceMappingURL=style.css.map */

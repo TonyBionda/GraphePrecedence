@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width: 749px) {
+    .content {
+      grid-template-areas:
+        "description"
+        "input"
+        "output"
+        "console";
+      grid-template-rows: 200px 1fr 1fr auto;
+      grid-template-columns: 1fr;
+    }
+  }
+  @media screen and (min-width: 750px) {
+    .content {
+      grid-template-areas:
+        "input description"
+        "output console";
+      grid-template-rows: 200px auto;
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+  margin: 0;
+  min-width: 600px;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #3e3e3e;
+    width: 100%;
+    color: white;
+    h1 {
+      margin-left: 20px;
+    }
+    .links {
+      display: flex;
+      justify-content: space-between;
+      width: 30%;
+      :last-child {
+        margin-right: 10%;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        font-family: "Cookie", cursive;
+        font-size: 30px;
+      }
+    }
+  }
+  .content {
+    display: grid;
+    grid-gap: 20px;
+    margin: 10px;
+    height: auto;
+    width: 80%;
+    .input {
+      grid-area: input;
+      display: flex;
+      flex-direction: column;
+      textarea {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0;
+        width: 100%;
+        height: 100px;
+        resize: none;
+      }
+      button {
+        border: none;
+        cursor: pointer;
+      }
+    }
+    .output {
+      grid-area: output;
+      #canvas {
+        background: #ddd;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .description {
+      grid-area: description;
+      text-align: justify;
+    }
+    .console {
+      grid-area: console;
+      background: #ddd;
+      padding-left: 20px;
+      border-radius: 10px;
+      margin-bottom: 50px;
+      min-height: 200px;
+    }
+  }
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #3e3e3e;
+    text-align: center;
+    color: white;
+    font-family: "Cookie", cursive;
+  }
+}
+h1 {
+  font-family: "Cookie", cursive;
+  font-size: 30px;
+}
